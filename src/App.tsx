@@ -1,20 +1,22 @@
 import React from 'react';
 // import {Link, Route, Routes} from 'react-router-dom'
 import './App.css';
-import Home from './pages/Home'
-import Navbar from'./components/Navbar'
+import Home from './Pages/Home'
+import Navbar from'./lib/Components/Navbar'
 
 function App() {
+ 
   return (
     <div className="App">
-        <Navbar>
-          <ul className='list-items'>
-            <li>name="about"</li>
-            <li></li>
-            <li></li>
-          </ul>
-        </Navbar>
+            <Navbar
+            about='About'
+            contact="Contact"
+            services='Services'
+          />  
+            
          
+
+       
       <Home/>
      
     </div>
