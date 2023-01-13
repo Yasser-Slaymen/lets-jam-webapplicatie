@@ -13,10 +13,6 @@ function App() {
             contact="Contact"
             services='Services'
           />  
-            
-         
-
-       
       <Home/>
      
     </div>
