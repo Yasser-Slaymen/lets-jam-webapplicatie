@@ -13,7 +13,7 @@ function Navbar(props:Navprops){
         <nav className="navbar">
        
     <ul className="list-items" >
-        {document && (<li>{props.about} {document.data.title[0].text}</li>) }
+        {document && (<li>{document.data.title[0].text}</li>) }
         {document && (<li>{props.services} {document.data.title[0].text}</li>) }
         {document && (<li>{props.contact} {document.data.title[0].text}</li>) }
     </ul>
@@ -26,3 +26,7 @@ export default Navbar;
 // const [document] = useAllPrismicDocumentsByType('the_cliente_case')
 // if(!document) return null;
 // {document.map((pro,i) => { return ()})}
+
+// {document && (<li>{props.about} {document.data.title[0].text}</li>) }
+// {document && (<li>{props.services} {document.data.title[0].text}</li>) }
+// {document && (<li>{props.contact} {document.data.title[0].text}</li>) }
