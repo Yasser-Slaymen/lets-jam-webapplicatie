@@ -5,7 +5,7 @@ type Navprops={
     about:string
     contact: string
     services: string
-   
+    
 }
  function Navbar({ children, about, contact, services}:Navprops){
   return(
@@ -21,6 +21,14 @@ type Navprops={
     )
 }
 export default Navbar;
+
+
+
+
+
+
+
+
 // const [document] = useAllPrismicDocumentsByType('the_cliente_case')
 // if(!document) return null;
 // {document.map((pro,i) => { return ()})}
