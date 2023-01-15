@@ -1,5 +1,5 @@
 
-function Home (){
+function PrimarySection (){
     return(
         <div className="page-home">
             <h1>home</h1>
@@ -7,4 +7,4 @@ function Home (){
 
     );
 }
-export default Home;
+export default PrimarySection ;

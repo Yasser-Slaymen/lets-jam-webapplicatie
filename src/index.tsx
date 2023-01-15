@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { PrismicProvider } from '@prismicio/react'
-import { client } from '../src/lib/Utils/prismic'
 import './index.css';
 import App from './App';
 const root = ReactDOM.createRoot(
@@ -10,9 +8,9 @@ const root = ReactDOM.createRoot(
 root.render(
   
   <React.StrictMode>
-    <PrismicProvider client={client}>
      <App />
-    </PrismicProvider>
   </React.StrictMode>
 );
 
+// import { PrismicProvider } from '@prismicio/react'
+// import { client } from '../src/lib/Utils/prismic'
