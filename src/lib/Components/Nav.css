@@ -1,8 +1,11 @@
-nav {
+nav,a {
    font-family: sans-serif; 
    font-size:.9rem;
    font-weight:lighter;
    color: rgb(253, 254, 255);
+}
+a{
+    text-decoration: none;
 }
 nav{
     display: flex;
