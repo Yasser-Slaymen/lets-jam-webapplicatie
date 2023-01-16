@@ -5,10 +5,11 @@ import Navbar from '../lib/Components/Navbar'
 function HeadSect (){
     return(
         <>
-         <Navbar logo='BISNEXT' home='HOME' pages='PAGES' blog='BLOG' services='SERVICES' contact='CONTACT' img='../lib/Images/re.png'> 
-         {/* <img src={img} alt="logo" /> */}
-        </Navbar> 
+         <Navbar/> 
+        
         </>
     )
 }
 export default HeadSect;
+
+// logo='BISNEXT' home='HOME' pages='PAGES' blog='BLOG' services='SERVICES' contact='CONTACT' img='../lib/Images/re.png'

@@ -1,3 +1,4 @@
+import './Nav.css'
 type NavLinkProps = {
     title: string,
     link: string
@@ -5,7 +6,10 @@ type NavLinkProps = {
 
 function NavLink ({ title, link }:NavLinkProps){
     return (
+        <>
         <a href={link}>{ title }</a>
+        </>
+       
     )
 }
 

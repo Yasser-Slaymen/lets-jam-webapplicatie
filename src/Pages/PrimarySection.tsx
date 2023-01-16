@@ -12,7 +12,6 @@ function PrimarySection (){
                     nostrum dolorem vel, deserunt assumenda harum necessitatibus nemo, 
                 </p>
             </div>
-            
         </Title>
         </div> 
     );

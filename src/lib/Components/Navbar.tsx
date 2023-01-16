@@ -1,30 +1,24 @@
 import './Nav.css'
 import NavLink from './NavLink'
-import { ReactNode } from 'react';
-type Navprops={
-    children: ReactNode;
-    home:string
-    pages: string
-    blog: string
-    services: string
-    contact: string
-    logo:string
-    img:string
+// import { ReactNode } from 'react';
+// type Navprops={
+//     children: ReactNode;
+//     home:string
+//     pages: string
+//     blog: string
+//     services: string
+//     contact: string
+//     logo:string
+//     img:string
     
-}
- function Navbar({ children, home, pages,blog ,services, contact, logo}:Navprops){
+// }
+ function Navbar(){
   return(
         <nav className="navbar">
-            <div className='logo'>{logo}</div>
             <ul className="list-items" >
-                <li>{home}</li>
-                <li>{pages}</li>
-                <li>{blog}</li>
-                <li>{services}</li>
-                <li>{contact}</li>
-                <li>{children}</li>
-                <li><NavLink title="Home" link="/home" /></li>
-                <NavLink title="Pag" link="/pages" />
+             <li><NavLink title="Home" link="/home" /></li>
+             <li><NavLink title="PAGES" link="/page" /></li>
+             
             </ul> 
         </nav>
 
@@ -64,3 +58,16 @@ export default Navbar;
 //  about:string
 //   contact: string
 //   services: string
+/* <nav className="navbar">
+<div className='logo'>{logo}</div>
+<ul className="list-items" >
+    <li>{home}</li>
+    <li>{pages}</li>
+    <li>{blog}</li>
+    <li>{services}</li>
+    <li>{contact}</li>
+    <li>{children}</li>
+    <NavLink title="Home" link="/home" />
+    <NavLink title="Pag" link="/pages" />
+</ul> 
+</nav> */
