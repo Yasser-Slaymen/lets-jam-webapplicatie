@@ -1,0 +1,37 @@
+.primarySction{
+    background-color:rgb(60, 58, 58);
+}
+.primTitle{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 100px;
+line-height: 130%;
+/* or 130px */
+text-align: center;
+color: #FFFFFF;
+
+}
+.primAgency{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 140px;
+line-height: 140%;
+text-align: center;
+-webkit-text-stroke-color:#FFFFFF;
+-webkit-text-stroke-width:2px;
+    /* color: #000;;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-color: rgb(202, 211, 211);
+    -webkit-text-stroke-width:.2px; */
+}
+.primText{
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.8em;
+color: #CCCCCC;
+
+}

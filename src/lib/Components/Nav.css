@@ -1,14 +1,30 @@
+nav {
+   font-family: sans-serif; 
+   font-size:.9rem;
+   font-weight:lighter;
+   color: rgb(253, 254, 255);
+}
 nav{
-    background-color:red ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(89, 86, 86) ;
     margin-top: 0;
+    padding: 1em;
 }
 .list-items{
     display: flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
+    width: 30%;
     list-style: none;
+    background-color: transparent;
+}
+.logo{
+    background-color: transparent;
+    width: 30%;
 }
 li{
-    padding: 1em;
-    margin: 0 2em;
+    background-color: transparent;
 }
+

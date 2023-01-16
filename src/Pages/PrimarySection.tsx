@@ -1,14 +1,20 @@
-
+import'../Pages/style/PrimarySection.css'
+import Title from '../lib/Components/Title'
 function PrimarySection (){
     return(
-        <div className="page-home">
-            <h1>home</h1>
-            <h1>
-                
-                <img className='img-logo' src={logo} alt='imag'/>
-                </h1>
-        </div>
-
+        <div className="primarysect">
+        <Title> 
+            <div className="primarySction">
+                <h1 className='primTitle'><span>Business Solution <br />by Digital</span></h1>
+                <h1 className='primAgency'>Agency</h1>
+                <p className="primText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+                    nostrum dolorem vel, deserunt assumenda harum necessitatibus nemo, 
+                </p>
+            </div>
+            
+        </Title>
+        </div> 
     );
 }
-export default PrimarySection ;
+export default PrimarySection;
