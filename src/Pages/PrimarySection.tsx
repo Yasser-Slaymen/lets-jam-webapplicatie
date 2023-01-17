@@ -1,19 +1,9 @@
 import'../Pages/style/PrimarySection.css'
 import Title from '../lib/Components/Title'
-import { useGQLQuery } from '../useGQLQuery';
-const GET_STORIES = gql`
-query Letsjam {
-    Data {
-      id
-      title
-    }
-  }
-`;
+
 
 function PrimarySection (){
     // Fetch data from custom hook that uses React-Query
-   const { data } = useGQLQuery('Letsjam', GET_STORIES);
-   console.log(data);
     return(
         <div className="primarysect">
         <Title> 

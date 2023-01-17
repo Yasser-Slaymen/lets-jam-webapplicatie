@@ -1,4 +1,4 @@
-import React from 'react';
+import Test from './lib/Components/Test'
 // import {Link, Route, Routes} from 'react-router-dom'
 import './App.css';
 import HeadSect from './Pages/HeadSect';
@@ -7,7 +7,8 @@ function App() {
   return (
     <div className="App">
        <HeadSect/> 
-       <PrimarySection/>   
+       <PrimarySection/>
+       {/* <Test/>    */}
     </div>
   );
 }

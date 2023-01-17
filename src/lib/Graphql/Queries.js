@@ -8,3 +8,21 @@ export const useGQLQuery = (key, query, variables, config = {}) => {
 
   return useQuery(key, fetchData, config)
 };
+
+// import {GraphQLClient, gql, request}  from 'graphql-request';
+
+// export const graphcms = new GraphQLClient(process.env.REACT_APP_API)
+// const category =`
+// id,
+// title,
+// slug
+// `
+// export const QUERY_SLUG_CATEGORIES = gql`
+// {
+//   categories(){
+//     title,
+//     slug
+//   }
+// }
+// `
+
