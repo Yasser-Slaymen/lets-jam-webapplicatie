@@ -1,4 +1,4 @@
-import Test from './lib/Components/Test'
+// import Test from './lib/Components/Test'
 // import {Link, Route, Routes} from 'react-router-dom'
 import './App.css';
 import HeadSect from './Pages/HeadSect';
@@ -8,7 +8,6 @@ function App() {
     <div className="App">
        <HeadSect/> 
        <PrimarySection/>
-       {/* <Test/>    */}
     </div>
   );
 }

@@ -1,19 +1,8 @@
-import './Nav.css'
+import '../Stylingcomponents/Nav.css'
 import NavLink from './NavLink'
 import logo from '../Images/logo.png'
 
-// import { ReactNode } from 'react';
-// type Navprops={
-//     children: ReactNode;
-//     home:string
-//     pages: string
-//     blog: string
-//     services: string
-//     contact: string
-//     logo:string
-//     img:string
-    
-// }
+
  function Navbar(){
   return(
         <nav className="navbar">
@@ -21,7 +10,7 @@ import logo from '../Images/logo.png'
             <ul className="list-items" >
              <li><NavLink title="Home" link="/home" /></li>
              <li><NavLink title="PAGES" link="/page" /></li>
-             <li><NavLink title="BLOG" link="/" /></li>
+             <li><NavLink title="BLOG" link="/blog" /></li>
              <li><NavLink title="SERVICES" link="/sevices" /></li>
              <li><NavLink title="CONTACT" link="/contact" /></li>
             </ul> 
@@ -36,7 +25,18 @@ export default Navbar;
 
 
 
-
+// import { ReactNode } from 'react';
+// type Navprops={
+//     children: ReactNode;
+//     home:string
+//     pages: string
+//     blog: string
+//     services: string
+//     contact: string
+//     logo:string
+//     img:string
+    
+// }
 
 // const [document] = useAllPrismicDocumentsByType('the_cliente_case')
 // if(!document) return null;

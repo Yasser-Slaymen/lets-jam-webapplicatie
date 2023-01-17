@@ -1,5 +1,9 @@
-.primarySction{
-    background-color:rgb(60, 58, 58);
+.primarymain{
+background-image:url(/src/lib/Images/hero.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height:89vh;
 }
 .primTitle{
 font-family: 'Poppins';
@@ -21,17 +25,16 @@ line-height: 140%;
 text-align: center;
 -webkit-text-stroke-color:#FFFFFF;
 -webkit-text-stroke-width:2px;
-    /* color: #000;;
-    -webkit-text-fill-color:transparent;
-    -webkit-text-stroke-color: rgb(202, 211, 211);
-    -webkit-text-stroke-width:.2px; */
 }
 .primText{
+margin-left: 2em;
 font-family: 'Plus Jakarta Sans';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
 line-height: 1.8em;
+width: fit-content;
+padding: .3em;
 color: #CCCCCC;
-
+border-left: .3em solid #FF7425;
 }
