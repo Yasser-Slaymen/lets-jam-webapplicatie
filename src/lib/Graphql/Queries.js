@@ -1,13 +1,21 @@
-import { useQuery } from 'react-query';
-import {request}  from 'graphql-request';
+export const testQuery = `query Workouts {
+  workouts() {
+    id
+    title,
+    slug
+  
+}}`;
 
-export const useGQLQuery = (key, query, variables, config = {}) => {
-  const endpoint = 'https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master';
+// import { useQuery } from 'react-query';
+// import {request}  from 'graphql-request';
 
-  const fetchData = async () => await request(endpoint, query, variables)
+// export const useGQLQuery = (key, query, variables, config = {}) => {
+//   const endpoint = 'https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master';
 
-  return useQuery(key, fetchData, config)
-};
+//   const fetchData = async () => await request(endpoint, query, variables)
+
+//   return useQuery(key, fetchData, config)
+// };
 
 // import {GraphQLClient, gql, request}  from 'graphql-request';
 

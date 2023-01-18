@@ -1,30 +1,51 @@
-import gql from 'graphql-tag';
-import {useGQLQuery} from '../Graphql/Queries'
-// import {graphcms, QUERY_SLUG_CATEGORIES} from '../Graphql/Queries'
-const QUERY_SLUG_CATEGORIES = gql`
- query{
-  categories{
-    title,
-    slug
-  }
-}
-`;
+import "../Stylingcomponents/Test.css";
+import { GraphQLClient } from "graphql-request";
+import {testQuery} from "../Graphql/Queries";
+import Ttest from './Ttest'
 
-function Test(){
-   // Fetch data from custom hook that uses React-Query
-   const { data} = useGQLQuery('categories', QUERY_SLUG_CATEGORIES);
-   console.log(data);
-    return(
-    <div>
-        <h1>Test</h1>
-        <section>
-            {data.categories((caty) =>(
-                <article key={caty.id}>
-                  <h2>{caty.title}</h2>
-                </article>
-            ))}
-        </section>
-    </div>
-    )
+
+// import {graphcms, QUERY_SLUG_CATEGORIES} from '../Graphql/Queries'
+export async function getServerSideProps() {
+  const hygraph = new GraphQLClient(
+    process.env.REACT_APP_API
+  )
+
+  const { data } = await hygraph.request(testQuery);
+  console.log(data)
+  return {
+    props: {
+      data
+
+    }
+
+  }
+
+}
+
+
+function Test({ data}: any) {
+  return (
+    
+   data.map((story: any) =>{
+    return (
+    <>
+    <Ttest key={story.id}>
+      <div className="test">
+      <h1>{story.id}</h1>
+      <h1>{story.title}</h1>
+     
+      </div>
+    </Ttest>
+    </>
+                
+      )})
+    
+  );
 }
 export default Test;
+// const { data} = useGQLQuery('categories', QUERY_SLUG_CATEGORIES);
+//    console.log(data);
+// data.map((story) =>{ return()})
+
+
+

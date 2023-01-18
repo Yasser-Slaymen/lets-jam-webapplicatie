@@ -6,9 +6,9 @@ type Titleprops={
 }
 function Title ({children}:Titleprops){
     return(
-        <div className='compTitle'>
+        <>
         {children}
-        </div>
+        </>
     )  
 }
 export default Title;

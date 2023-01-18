@@ -7,7 +7,7 @@ function SecondLogos (){
         <>
          <TsecondLogos>
          <div className="secondlogos">
-         <p className="Secondnote">
+         <p className="Second-note">
            OVER 2K+ SOFTWATER BUSINESSE <br />
            GROWING WITH OUR BUSINESS
          </p>
