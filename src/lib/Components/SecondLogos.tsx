@@ -15,8 +15,7 @@ function SecondLogos (){
          </div>
          </TsecondLogos>
        
-        </>
-        
+        </> 
     )
 }
 export default SecondLogos;
