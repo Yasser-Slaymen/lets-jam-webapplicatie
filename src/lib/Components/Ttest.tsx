@@ -1,12 +1,13 @@
-import { ReactNode } from 'react';
-type Secondlogosprops={
-    children:ReactNode
+
+type  Secondlogosprops= {
+    title: string
+   
 }
-function Ttest ({children}:Secondlogosprops) {
+function Ttest ( {title}:Secondlogosprops) {
     return(
         <>
-        {children}
-        </>
+        <h1>{title}</h1>
+         </>
     )
 }
 export default Ttest;

@@ -1,10 +1,29 @@
-export const testQuery = `query Workouts {
-  workouts() {
-    id
+import {GraphQLClient, gql}  from 'graphql-request';
+
+export const graphcms = new GraphQLClient(process.env.REACT_APP_API)
+const category =`
+id,
+title,
+slug
+`
+export const QUERY_SLUG_CATEGORIES = gql`
+{
+  categories(){
     title,
     slug
+  }
+}
+
+
+
+
+// export const testQuery = query Workouts 
+//   workouts() {
+//     id
+//     title,
+//     slug
   
-}}`;
+// }}`;
 
 // import { useQuery } from 'react-query';
 // import {request}  from 'graphql-request';
