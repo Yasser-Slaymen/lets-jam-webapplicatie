@@ -13,7 +13,7 @@ nav{
     align-items: center;
     background-color:rgb(89, 86, 86) ;
     margin-top: 0;
-    padding: 1em;
+    padding: .2em;
 }
 .list-items{
     display: flex;

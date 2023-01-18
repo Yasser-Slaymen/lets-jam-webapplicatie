@@ -1,40 +1,49 @@
 .primarymain{
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content:space-between ;
+align-items: center;
 background-image:url(/src/lib/Images/hero.png);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-height:89vh;
+height:121vh;
 }
 .primTitle{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 600;
-font-size: 100px;
+font-size: 113px;
 line-height: 130%;
-/* or 130px */
 text-align: center;
 color: #FFFFFF;
 
 }
+
 .primAgency{
-font-family: 'Poppins';
+position: absolute;
+left:51% ;
+font-family:'Poppins';
 font-style: normal;
 font-weight: 500;
-font-size: 140px;
+font-size: 135px;
 line-height: 140%;
 text-align: center;
 -webkit-text-stroke-color:#FFFFFF;
 -webkit-text-stroke-width:2px;
 }
 .primText{
-margin-left: 2em;
+position: absolute;
+top: 41%;
+left:18%;   
 font-family: 'Plus Jakarta Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 20px;
+font-size: 1em;
 line-height: 1.8em;
 width: fit-content;
-padding: .3em;
+padding-left: .5em;
 color: #CCCCCC;
 border-left: .3em solid #FF7425;
 }
