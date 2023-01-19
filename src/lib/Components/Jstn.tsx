@@ -1,3 +1,65 @@
+import "../Stylingcomponents/Test.css";
+import Ttest from "./Ttest";
+
+import React, { useEffect, useState } from 'react';
+import { request } from 'graphql-request';
+// import Product from '../Graphql/Queries'
+
+
+
+
+function Jst() {
+    const [stories, setProducts] = useState(null);
+
+    useEffect(() => {
+      const fetchProducts = async () => {
+        const { stories } = await request(
+          'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9ocu5vw0djy01uk0jvtb81s/master',
+          `
+        {
+            stories {
+                id
+                title
+          }
+        }
+      `
+        );
+  
+        setProducts(stories);
+      };
+  
+      fetchProducts();
+    }, []);
+   
+ return (
+  <>
+    <div className="test">
+      <Ttest text="Test">
+        <div>
+            <div>
+
+            </div>
+            {!stories ? (
+                'Loading....'
+                ) : (<ul>
+                    {stories.map(({ id, title, image }) => (
+                        <li key={id}>
+                        <p>{title}</p>
+                         </li>
+
+                    ))}
+
+                </ul> )}
+        
+        </div>
+
+      </Ttest>
+    </div>
+  </>
+);
+}
+export default Jst;
+
 // import { workoutsLatestQuery } from "../Graphql/Queries";
 // import { GraphQLClient } from "graphql-request";
 // import Ttest from "./Ttest";

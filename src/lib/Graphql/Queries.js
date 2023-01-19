@@ -1,14 +1,24 @@
-import { useParams } from 'react-router-dom';
+import { request } from 'graphql-request';
+import {useState } from 'react';
 
-function Product({ products }) {
-  const { slug } = useParams();
+const [stories, setProducts] = useState(null);
 
-  const product = products.find((product) => product.slug === slug);
+export const fetchProducts = async () => {
+  const { stories } = await request(
+    'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9ocu5vw0djy01uk0jvtb81s/master',
+    `
+  {
+      stories {
+          id
+          title
+    }
+  }
+`
+  );
 
-  return <h1>{product.name}</h1>;
-}
+  setProducts(stories);
+};
 
-export default Product;
 
 // import { useQuery } from 'react-query';
 // import {request } from 'graphql-request';
