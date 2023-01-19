@@ -4,7 +4,7 @@ import './App.css';
 import HeadSect from './Pages/HeadSect';
 import PrimarySection from './Pages/PrimarySection'
 import SecondSection from './Pages/SecondSection';
-import Test from './lib/Components/Test'
+import Test from './lib/Components/Dtest'
 function App() {
   return (
     <div className="App">

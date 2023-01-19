@@ -1,29 +1,34 @@
-import '../Stylingcomponents/Nav.css'
-import NavLink from './NavLink'
-import logo from '../Images/logo.png'
+import "../Stylingcomponents/Nav.css";
+import NavLink from "./NavLink";
+import logo from "../Images/logo.png";
 
-
- function Navbar(){
-  return(
-        <nav className="navbar">
-            <div><NavLink logo={logo} title="" link=""/></div>
-            <ul className="list-items" >
-             <li><NavLink title="Home" link="/home" /></li>
-             <li><NavLink title="PAGES" link="/page" /></li>
-             <li><NavLink title="BLOG" link="/blog" /></li>
-             <li><NavLink title="SERVICES" link="/sevices" /></li>
-             <li><NavLink title="CONTACT" link="/contact" /></li>
-            </ul> 
-        </nav>
-
-    )
+function Navbar() {
+  return (
+    <nav className="navbar">
+      <div>
+        <NavLink logo={logo} title="" link="" />
+      </div>
+      <ul className="list-items">
+        <li>
+          <NavLink title="Home" link="/home" />
+        </li>
+        <li>
+          <NavLink title="PAGES" link="/page" />
+        </li>
+        <li>
+          <NavLink title="BLOG" link="/blog" />
+        </li>
+        <li>
+          <NavLink title="SERVICES" link="/sevices" />
+        </li>
+        <li>
+          <NavLink title="CONTACT" link="/contact" />
+        </li>
+      </ul>
+    </nav>
+  );
 }
 export default Navbar;
-
-
-
-
-
 
 // import { ReactNode } from 'react';
 // type Navprops={
@@ -35,7 +40,7 @@ export default Navbar;
 //     contact: string
 //     logo:string
 //     img:string
-    
+
 // }
 
 // const [document] = useAllPrismicDocumentsByType('the_cliente_case')
