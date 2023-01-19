@@ -2,29 +2,34 @@ import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
 import React, { useEffect, useState } from 'react';
 import { request } from 'graphql-request';
+// import { RichText } from "@graphcms/rich-text-react-renderer";
 // import Product from '../Graphql/Queries'
 
 
 
 
 function Jst() {
-    const [stories, setProducts] = useState(null);
+    const [webs, setProducts] = useState(null);
 
     useEffect(() => {
       const fetchProducts = async () => {
-        const { stories } = await request(
-          'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9ocu5vw0djy01uk0jvtb81s/master',
+        const { webs } = await request(
+          'https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master',
           `
         {
-            stories {
+            webs {
                 id
-                title
+                name
+                text {
+                  text
+                }
+                
           }
         }
       `
         );
   
-        setProducts(stories);
+        setProducts(webs);
       };
   
       fetchProducts();
@@ -33,17 +38,19 @@ function Jst() {
  return (
   <>
     <div className="test">
-      <Ttest text="Test">
+      <Ttest>
         <div>
             <div>
 
             </div>
-            {!stories ? (
-                'Loading....'
+            {!webs? (
+                'Loading...!'
                 ) : (<ul>
-                    {stories.map(({ id, title, image }) => (
-                        <li key={id}>
-                        <p>{title}</p>
+                    {webs.map((web: any) => (
+                        <li key={web.id}>
+                        <h1>{web.name}</h1>
+                        <h1>{web.text}</h1>
+                        
                          </li>
 
                     ))}

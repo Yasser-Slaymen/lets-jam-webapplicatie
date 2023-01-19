@@ -1,4 +1,4 @@
-import './style/SecondSection.css'
+import './style/SecondrySection.css'
 import SecondLogos from '../lib/Components/SecondLogos'
 function SecondSection () {
     return(

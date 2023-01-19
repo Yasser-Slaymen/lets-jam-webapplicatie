@@ -33,7 +33,7 @@ function Test() {
  return (
   <>
     <div className="test">
-      <Ttest text="Test">
+      <Ttest>
         <div>
             <div>
 

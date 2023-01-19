@@ -1,6 +1,23 @@
-.secondlogos{
-    background-color: brown;
+.sec-img1{
+    position: absolute;
+    top: -2%;
+    left: 6%;
 }
-.Second-note{
-    color: white;
+.secondlogos{
+   display: flex;
+   justify-content: space-around; 
+   align-items: center;
+   margin-top: 6em;
+}
+.Second-note{  
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 100;
+font-size: 1em;
+line-height: 1.3em;
+width: fit-content;
+padding-left: .5em;
+text-align:center;
+color: #CCCCCC;
+border-left: .3em solid #FF7425;
 }

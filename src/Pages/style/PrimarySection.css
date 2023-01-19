@@ -1,49 +1,48 @@
-.primarymain{
-position: relative;
-display: flex;
-flex-direction: column;
-justify-content:space-between ;
-align-items: center;
-background-image:url(/src/lib/Images/hero.png);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-height:121vh;
+.primarymain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(/src/lib/Images/hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 121vh;
 }
-.primTitle{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 113px;
-line-height: 130%;
-text-align: center;
-color: #FFFFFF;
+.primTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 113px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+}
 
+.primAgency {
+  position: absolute;
+  left: 51%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 135px;
+  line-height: 140%;
+  text-align: center;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 2px;
 }
-
-.primAgency{
-position: absolute;
-left:51% ;
-font-family:'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 135px;
-line-height: 140%;
-text-align: center;
--webkit-text-stroke-color:#FFFFFF;
--webkit-text-stroke-width:2px;
-}
-.primText{
-position: absolute;
-top: 41%;
-left:18%;   
-font-family: 'Plus Jakarta Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 1em;
-line-height: 1.8em;
-width: fit-content;
-padding-left: .5em;
-color: #CCCCCC;
-border-left: .3em solid #FF7425;
+.primText {
+  position: absolute;
+  top: 41%;
+  left: 18%;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.8em;
+  width: fit-content;
+  padding-left: 0.5em;
+  color: #cccccc;
+  border-left: 0.3em solid #ff7425;
 }
