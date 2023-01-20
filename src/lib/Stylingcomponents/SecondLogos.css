@@ -1,23 +1,93 @@
-.sec-img1{
-    position: absolute;
-    top: -2%;
-    left: 6%;
+.sec-img1 {
+  position: absolute;
+  top: -11%;
+  left: 6%;
 }
-.secondlogos{
-   display: flex;
-   justify-content: space-around; 
-   align-items: center;
-   margin-top: 6em;
+.Sec_1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6em;
 }
-.Second-note{  
-font-family: 'Plus Jakarta Sans';
-font-style: normal;
-font-weight: 100;
-font-size: 1em;
-line-height: 1.3em;
-width: fit-content;
-padding-left: .5em;
-text-align:center;
-color: #CCCCCC;
-border-left: .3em solid #FF7425;
+.Second-note {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 1.3em;
+  width: fit-content;
+  padding-left: 0.5em;
+  text-align: center;
+  color: #cccccc;
+  border-left: 0.3em solid #ff7425;
+}
+/* section tow */
+.Sec_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+}
+.head2_1 {
+  margin-left: 6em;
+}
+.head2_2 {
+  margin-right: 7.7em;
+}
+.head2_1 p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+.head2_1 h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 135%;
+  color: #ffffff;
+}
+.head2_2 p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #aaaaaa;
+  margin-bottom: 1em;
+}
+/* section three */
+.futer2_3{
+    display: grid;
+    grid-template-columns: repeat(26, 4%);
+    /* grid-template-rows: repeat(10, 10%); */
+    grid-column-gap:.2em ;
+}
+.se2_1{
+grid-column:3/7;
+background-color: #ff7425;
+width: 350px;
+/* height: 380px; */
+}
+.se2_2{
+    grid-column:12/18;
+}
+.se2_3{
+    grid-column: 18/24;
+}
+.futer2_3 img {
+  width: 350px;
+  height: 380px;
+}
+.futer2_3 h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.875em;
+  line-height: 135%;
+  color: #ffffff;
+  margin-top: 0.2em;
 }
