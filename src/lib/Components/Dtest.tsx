@@ -39,9 +39,9 @@ function Test() {
 
             </div>
             {!stories ? (
-                'Loading....'
+                'Loading....stories'
                 ) : (<ul>
-                    {stories.map(({ id, title, image }) => (
+                    {stories.map(({ id, title}) => (
                         <li key={id}>
                         <p>{title}</p>
                          </li>

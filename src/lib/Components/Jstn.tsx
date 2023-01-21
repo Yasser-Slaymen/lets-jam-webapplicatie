@@ -1,70 +1,69 @@
 import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
-import React, { useEffect, useState } from 'react';
-import { request } from 'graphql-request';
-// import { RichText } from "@graphcms/rich-text-react-renderer";
-// import Product from '../Graphql/Queries'
-
-
-
+import { useEffect, useState } from "react";
+import { request } from "graphql-request";
 
 function Jst() {
-    const [webs, setProducts] = useState(null);
+  const [thirdSections, setProducts] = useState(null);
 
-    useEffect(() => {
-      const fetchProducts = async () => {
-        const { webs } = await request(
-          'https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master',
-          `
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { thirdSections } = await request(
+        "https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master",
+        `
         {
-            webs {
+          thirdSections {
                 id
-                name
-                text {
-                  text
+                title
+                img {
+                  url
                 }
+                
                 
           }
         }
       `
-        );
-  
-        setProducts(webs);
-      };
-  
-      fetchProducts();
-    }, []);
-   
- return (
-  <>
-    <div className="test">
-      <Ttest>
-        <div>
-            <div>
+      );
 
-            </div>
-            {!webs? (
-                'Loading...!'
-                ) : (<ul>
-                    {webs.map((web: any) => (
-                        <li key={web.id}>
-                        <h1>{web.name}</h1>
-                        <h1>{web.text}</h1>
-                        
-                         </li>
+      setProducts(thirdSections);
+    };
 
-                    ))}
+    fetchProducts();
+  }, []);
 
-                </ul> )}
-        
-        </div>
-
-      </Ttest>
-    </div>
-  </>
-);
+  return (
+    <>
+      <div className="test">
+        <Ttest>
+          <div>
+            {!thirdSections ? ( 
+              "Loading...!"
+            ) : (
+              <ul>
+                {thirdSections.map((web: any) => (
+                  <div key={web.id}>
+                    <h1>{web.title}</h1>
+                    <div>{web.img.url}</div>
+                  </div>
+                ))}
+              </ul>
+            )}
+          </div>
+        </Ttest>
+      </div>
+    </>
+  );
 }
 export default Jst;
+
+// {!webs ? (
+//   "Oopss somthing going wrong"
+//   ) : (
+//     <>
+//     {webs.map((web: any) => ())}
+//     </>
+//     )}
+
 
 // import { workoutsLatestQuery } from "../Graphql/Queries";
 // import { GraphQLClient } from "graphql-request";

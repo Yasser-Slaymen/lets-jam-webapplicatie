@@ -1,4 +1,56 @@
-.thirdcomp{
-    background-color: chocolate;
-    height: 43.75em;
+.thirdcomp {
+  display: flex;
+  justify-content: center;
+  /* background-color: chocolate; */
+  height: 43.75em;
+}
+.third_images {
+  position: relative;
+  width: 700px;
+  height: 700px;
+}
+.img3_2 {
+  position: absolute;
+  top: 37%;
+  left: 17.5rem;
+}
+.third_content {
+  margin-right: 2rem;
+  width: 579px;
+  height: 700px;
+}
+
+.third_content h3 {
+  width: 480px;
+  height: 108px;
+  left: 835px;
+  top: 2251px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 135%;
+  /* or 54px */
+  color: #ffffff;
+}
+
+.third_content h5{
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 160%;
+  /* or 22px */
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+.third_content p {
+  
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  color: #aaaaaa;
 }
