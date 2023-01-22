@@ -37,7 +37,7 @@ function Jst() {
         <Ttest>
           <div>
             {!thirdSections ? ( 
-              "Loading...!"
+              "Loading... Oops somthing went wrong!"
             ) : (
               <ul>
                 {thirdSections.map((web: any) => (

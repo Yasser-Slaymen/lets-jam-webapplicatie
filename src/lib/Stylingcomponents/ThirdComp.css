@@ -1,40 +1,55 @@
 .thirdcomp {
   display: flex;
   justify-content: center;
-  /* background-color: chocolate; */
-  height: 43.75em;
+  height: 47em;
 }
+/* section one */
 .third_images {
   position: relative;
   width: 700px;
   height: 700px;
 }
+.img3_1 {
+  position: relative;
+  z-index: 1;
+}
 .img3_2 {
   position: absolute;
   top: 37%;
   left: 17.5rem;
+  z-index: 99999;
 }
+.ellipse3_4 {
+  position: absolute;
+  top: 78%;
+  left: 25%;
+}
+.shape3_3 {
+  position: absolute;
+  top: 11%;
+  left: 75%;
+}
+/* section content */
 .third_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin-right: 2rem;
   width: 579px;
   height: 700px;
 }
 
 .third_content h3 {
-  width: 480px;
-  height: 108px;
-  left: 835px;
-  top: 2251px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 56px;
   line-height: 135%;
-  /* or 54px */
+  margin-top: -1em;
   color: #ffffff;
 }
 
-.third_content h5{
+.third_content h5 {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 600;
@@ -45,7 +60,6 @@
   color: #888888;
 }
 .third_content p {
-  
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 500;
@@ -53,4 +67,73 @@
   line-height: 140%;
   /* or 22px */
   color: #aaaaaa;
+}
+.third_content ul {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  list-style-type: none;
+  color: #cccccc;
+}
+.third_content ul li{
+  padding: .8em 0 0 0;
+}
+#check3_box{
+ position: relative;
+
+}
+#check3_box::before{
+  position: absolute;
+  content: "" ;
+  height: 20px;
+  width: 20px;
+  background-color:#FF7425 ;
+  border: 1px solid #FF7425;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer ;
+  transition: 0.3s all ease;
+}
+
+#check3_box:checked::before{
+  background-color:#FF7425 ;
+  border: 1px solid #FF7425 ;
+
+}
+#check3_box:checked::after{
+  position: absolute;
+  content:url(/src/lib/Images/checkbox.png);
+  background-position: center;
+  background-size: cover;
+  top: 26%;
+  left: 124%;
+  transform: translate(-50%, -50%);
+
+}
+.checkbox3_span{
+  margin-left: .7em;
+}
+
+.third_content article span{
+width: 96px;
+height: 49px;
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 35px;
+line-height: 140%;
+/* identical to box height, or 49px */
+color: #FFFFFF;
+
+}
+.third_content article{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+
 }

@@ -2,8 +2,10 @@ import "../Stylingcomponents/ThirdComp.css";
 import TthirdComp from "./TthirdComp";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
-import Img3_1 from '../Images/img3_1.png'
-import Img3_2 from '../Images/img3_2.png'
+import Img3_1 from "../Images/img3_1.png";
+import Img3_2 from "../Images/img3_2.png";
+import Ellipse3_4 from "../Images/Ellipse3_4.png";
+import Shape3_3 from "../Images/shape3_3.png";
 
 function ThirdComp() {
   const [thirdSections, setProducts] = useState(null);
@@ -42,9 +44,10 @@ function ThirdComp() {
               {thirdSections.map((third: any) => (
                 <div className="thirdcomp" key={third.id}>
                   <section className="third_images">
-                    <img className="img3_1" src= {Img3_1} alt="img" />
-                    <img  className="img3_2" src= {Img3_2} alt="img" />
-
+                    <img className="img3_1" src={Img3_1} alt="img" />
+                    <img className="img3_2" src={Img3_2} alt="img" />
+                    <img className="ellipse3_4" src={Ellipse3_4} alt="img" />
+                    <img className="shape3_3" src={Shape3_3} alt="img" />
                   </section>
 
                   <section className="third_content">
@@ -55,17 +58,42 @@ function ThirdComp() {
                       Repudiandae laudantium esse aperiam libero dolore maxime
                       amet tenetur laborum, error voluptatem beatae consectetur
                       sunt vel molestias quis blanditiis unde nisi sapiente?
+                      amet tenetur laborum, error voluptatem beatae consectetur
+                      sunt vel molestias quis blanditiis unde nisi sapiente?
+                      amet tenetur laborum, error voluptatem beatae consectetur
+                      sunt vel molestias quis blanditiis unde nisi sapiente?amet tenetur laborum, error voluptatem beatae consectetur
+                      sunt vel molestias quis blanditiis unde nisi sapiente?
                     </p>
                     <ul>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
+                      <li>
+                        <input type="checkbox" id="check3_box" />
+                        <span className="checkbox3_span">
+                          Lorem ipsu mdolor sit amet.Lorem ipsum dolor sit amet.
+                        </span>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="check3_box" />
+                        <span className="checkbox3_span">
+                          Lorem ipsu mdolor sit amet.Lorem ipsum dolor sit amet.
+                        </span>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="check3_box" />
+                        <span className="checkbox3_span">
+                          Lorem ipsu mdolor sit amet.Lorem ipsum dolor sit amet.
+                        </span>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="check3_box" />
+                        <span className="checkbox3_span">
+                          Lorem ipsu mdolor sit amet.Lorem ipsum dolor sit amet.
+                        </span>
+                      </li>
                     </ul>
                     <article>
-                      <span>5</span>
-                      <span>3</span>
-                      <span>2</span>
+                      <span>120%</span>
+                      <span>250%</span>
+                      <span>100%</span>
                     </article>
                   </section>
                 </div>
