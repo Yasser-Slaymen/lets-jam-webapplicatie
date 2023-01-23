@@ -1,0 +1,87 @@
+.fourthcomp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  height: 30em;
+}
+/*Accordion*/
+.fourth_listQuestions {
+  display: grid;
+  place-items: center;
+  width: 37.625em;
+  height: 23.875em;
+}
+.fourth_listQuestions details {
+  margin: 0.2em;
+}
+.fourth_listQuestions summary {
+  padding: 1.5em;
+  width: 28em;
+  height: 4.375em;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 144%;
+  color: #ffffff;
+  background: #222222;
+}
+.fourth_listQuestions p {
+  padding-left: 0.5em;
+  width: 35em;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 144%;
+  color: #aaaaaa;
+  /* overflow-x: hidden; */
+}
+
+/* section tow */
+.fourth_portoflio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 37.625em;
+  height: 23.875em;
+}
+.fourth_header {
+    margin-top: -1.5em;
+  width: 415px;
+  height: 108px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 135%;
+  color: #ffffff;
+}
+.fourth_stitle {
+  
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+.fourth_portoflio p {
+  width: 30em;
+  height: 5.6875em;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: em;
+  line-height: 144%;
+  /* or 23px */
+  color: #aaaaaa;
+}
+.fourth_img{
+  width: 153px;
+height: 60px;
+}
+
