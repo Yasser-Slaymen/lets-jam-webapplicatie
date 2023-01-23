@@ -2,30 +2,34 @@ import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
+import { RichText } from '@graphcms/rich-text-react-renderer';
+
 
 function Jst() {
-  const [thirdSections, setProducts] = useState(null);
+  const [testes, setProducts] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { thirdSections } = await request(
+      const { testes } = await request(
         "https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master",
         `
         {
-          thirdSections {
-                id
-                title
-                img {
-                  url
-                }
-                
+          testes {
+               id
+               nametest
+               img {
+                url
+               }
+               richText {
+                html
+               }
                 
           }
         }
       `
       );
 
-      setProducts(thirdSections);
+      setProducts(testes);
     };
 
     fetchProducts();
@@ -36,14 +40,20 @@ function Jst() {
       <div className="test">
         <Ttest>
           <div>
-            {!thirdSections ? ( 
+            {!testes ? ( 
               "Loading... Oops somthing went wrong!"
             ) : (
               <ul>
-                {thirdSections.map((web: any) => (
-                  <div key={web.id}>
-                    <h1>{web.title}</h1>
-                    <div>{web.img.url}</div>
+                {testes.map((test: any) => (
+                  <div key={test.id}>
+                    <h1>{test.nametest}</h1>
+                    <img src={test.img.url} alt="img" />
+                    <RichText
+  
+                   
+                     
+                    />
+                                        
                   </div>
                 ))}
               </ul>
