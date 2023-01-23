@@ -12,12 +12,12 @@ import Jst from './lib/Components/Jstn'
 function App() {
   return (
     <div className="App">
-      {/* <HeadSect />
+      <HeadSect />
       <PrimarySection />
       <SecondSection />
       <ThirdSection />
       <FouthSection/>
-      <FooterSection/> */}
+      <FooterSection/>
       {/* <Test/> */}
       <Jst/>
     </div>

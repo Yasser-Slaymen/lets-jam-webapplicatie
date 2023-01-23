@@ -2,8 +2,7 @@ import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
-import { RichText } from '@graphcms/rich-text-react-renderer';
-
+// import { RichText } from "@graphcms/rich-text-react-renderer";
 
 function Jst() {
   const [testes, setProducts] = useState(null);
@@ -40,7 +39,7 @@ function Jst() {
       <div className="test">
         <Ttest>
           <div>
-            {!testes ? ( 
+            {!testes ? (
               "Loading... Oops somthing went wrong!"
             ) : (
               <ul>
@@ -48,12 +47,6 @@ function Jst() {
                   <div key={test.id}>
                     <h1>{test.nametest}</h1>
                     <img src={test.img.url} alt="img" />
-                    <RichText
-  
-                   
-                     
-                    />
-                                        
                   </div>
                 ))}
               </ul>
@@ -73,7 +66,6 @@ export default Jst;
 //     {webs.map((web: any) => ())}
 //     </>
 //     )}
-
 
 // import { workoutsLatestQuery } from "../Graphql/Queries";
 // import { GraphQLClient } from "graphql-request";
