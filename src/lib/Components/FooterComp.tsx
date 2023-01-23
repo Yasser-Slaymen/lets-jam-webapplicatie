@@ -3,6 +3,7 @@ import TfooterComp from "./TfooterComp";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
 import logo from "../Images/logo.png";
+import LinkSocial from "./LinkSocialmedia";
 
 function FooterComp() {
   const [footersections, setProducts] = useState(null);
@@ -73,14 +74,33 @@ function FooterComp() {
                   <section className="footer_2">
                     <section className="Footer2_Contact">
                       <span className="Footer_Media">
-                        <a className="facebook" href="/">
-                          Facebook
-                        </a>
-                        <a href="/">Twitter</a>
-                        <a href=" url:www.linkedin.com/in/yasser-al-sleiman-a2a563220">
-                          Linkedin
-                        </a>
-                        <a href="/">Instagram</a>
+                        <div className="footer_icons">
+                          
+                          <LinkSocial
+                            link="/"
+                            content=" Facebook"
+                          />
+                        </div>
+                        <div className="footer_icons">
+                          
+                          <LinkSocial link="https://twitter.com/Slyman78691" content=" Twitter" />
+                        </div>
+                        <div className="footer_icons">
+                          
+                          <LinkSocial
+                            link="https://www.linkedin.com/in/yasser-al-sleiman-a2a563220/"
+                            content=" Linkedin"
+                          />
+                        </div>
+                        <div className="footer_icons">
+                          
+                          <LinkSocial link="/" content=" Instagram" />
+                        </div>
+                        <div className="footer_icons">
+                          
+                          <LinkSocial link="/" content=" Facebook" />
+                        </div>
+
                       </span>
                     </section>
 
@@ -100,8 +120,13 @@ function FooterComp() {
               <div className="copyright">
                 <div className="line"></div>
                 <div className="footer_Date">
-                  <p className="copyright_Date"> Copyright &copy;2023 BISNEXT. All Rights Reserved</p>
-                  <p className="copyright_privacay">Terms of Use     Privacay Policy</p>
+                  <p className="copyright_Date">
+                    {" "}
+                    Copyright &copy;2023 BISNEXT. All Rights Reserved
+                  </p>
+                  <p className="copyright_privacay">
+                    Terms of Use Privacay Policy
+                  </p>
                 </div>
               </div>
             </>

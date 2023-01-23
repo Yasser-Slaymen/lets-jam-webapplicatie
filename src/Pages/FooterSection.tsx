@@ -3,6 +3,7 @@ function FooterSection() {
   return (
     <>
       <FooterComp />
+
     </>
   );
 }

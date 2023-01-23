@@ -70,8 +70,11 @@
   color: #aaaaaa;
 }
 /* footer_2 */
+.Footer_Media{
+  display: flex;
+}
 
-.Footer_Media a {
+.footer_icons a {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 600;
