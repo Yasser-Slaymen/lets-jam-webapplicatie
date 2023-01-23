@@ -7,7 +7,7 @@ import SecondSection from "./Pages/SecondSection";
 import FouthSection from "./Pages/FourthSection";
 import FooterSection from "./Pages/FooterSection";
 // import Test from './lib/Components/Dtest'
-import Jst from './lib/Components/Jstn'
+// import Jst from './lib/Components/Jstn'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <FouthSection/>
       <FooterSection/>
       {/* <Test/> */}
-      <Jst/>
+      {/* <Jst/> */}
     </div>
   );
 }

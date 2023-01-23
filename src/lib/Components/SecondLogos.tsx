@@ -16,8 +16,7 @@ function SecondLogos() {
           {/* section-one */}
           <div className="Sec_1">
             <p className="Second-note">
-              OVER 2K+ SOFTWATER BUSINESSE <br />
-              GROWING WITH OUR BUSINESS
+             OVER 2K+ SOFTWATER BUSINESSE<br/>GROWING WITH OUR BUSINESS
             </p>
             <img className="sec-img2" src={Seclogos} alt="ellipe" />
           </div>

@@ -5,19 +5,21 @@ import { request } from "graphql-request";
 import logo from "../Images/logo.png";
 
 function FooterComp() {
-  const [thirdSections, setProducts] = useState(null);
+  const [footersections, setProducts] = useState(null);
   useEffect(() => {
     const fetchProducts = async () => {
-      const { thirdSections } = await request(
+      const { footersections } = await request(
         "https://api-eu-west-2.hygraph.com/v2/clcyyb4443l3q01t8hceqaruo/master",
         `
           {
-            thirdSections {
+            footersections {
                   id
                   title
                   img {
                     url
                   }
+                  multiText
+                  markdown
                   
                   
             }
@@ -25,7 +27,7 @@ function FooterComp() {
         `
       );
 
-      setProducts(thirdSections);
+      setProducts(footersections);
     };
 
     fetchProducts();
@@ -34,52 +36,74 @@ function FooterComp() {
     <>
       <TfooterComp>
         <>
-          {!thirdSections ? (
+          {!footersections ? (
             "Oopss somthing going wrong"
           ) : (
             <>
-              {thirdSections.map((third: any) => (
-                <div className="footercomp" key={third.id}>
+              {footersections.map((footer: any) => (
+                <div className="footercomp" key={footer.id}>
                   <section className="footer_1">
                     <section className="footer_content1">
                       <img className="footer_logo" src={logo} alt="logo" />
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Debitis tenetur aliquam corporis enim repudiandae.
-                      </p>
-                      <span>+31622817308</span>
+                      <p>{footer.multiText}</p>
+                      <a href="tel:+31622817308">+31622817308</a>
                     </section>
-                    <section className="footer_content1">
-                      <h4 className="footer_headr"></h4>
-                      <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
+
+                    <section className="footer_content2">
+                      <h4 className="footer_headr">{footer.title}</h4>
+                      <div>
+                        <ul>
+                          <li>About</li>
+                          <li>Pricing Table</li>
+                          <li>Contact Us</li>
+                          <li>Meet Our Team</li>
+                          <li>Latest News</li>
+                        </ul>
+                        <ul>
+                          <li>Case Studies</li>
+                          <li>FAQ's</li>
+                          <li>Service</li>
+                          <li>Customer Support</li>
+                        </ul>
+                      </div>
                     </section>
                   </section>
+
+                  {/* section tow */}
                   <section className="footer_2">
-                    <section className="Footer_Contact">
+                    <section className="Footer2_Contact">
                       <span className="Footer_Media">
-                        <a href="/"></a>
-                        <a href="/"></a>
-                        <a href="/"></a>
-                        <a href="/"></a>
+                        <a className="facebook" href="/">
+                          Facebook
+                        </a>
+                        <a href="/">Twitter</a>
+                        <a href=" url:www.linkedin.com/in/yasser-al-sleiman-a2a563220">
+                          Linkedin
+                        </a>
+                        <a href="/">Instagram</a>
                       </span>
                     </section>
-                    <section>
-                      <h4></h4>
-                      <h4 className="footer_email">
-                      <a href="mailto:johnjhone77@gmail.com?subject='Hello from Abstract!'&body='Just popped in to say hello'">Click to Send an Email</a>
 
-                      
-                      </h4>
+                    <section className="footer2_email">
+                      <h4>Let's work together.</h4>
+
+                      <a
+                        className="footer_email"
+                        href="mailto:y.a.sleiman1@gmail.com?subject='Hello from Abstract!'&body='Just popped in to say hello'"
+                      >
+                        Just drop me a line:y.a.sleiman1@gmail.com
+                      </a>
                     </section>
                   </section>
                 </div>
               ))}
+              <div className="copyright">
+                <div className="line"></div>
+                <div className="footer_Date">
+                  <p className="copyright_Date"> Copyright &copy;2023 BISNEXT. All Rights Reserved</p>
+                  <p className="copyright_privacay">Terms of Use     Privacay Policy</p>
+                </div>
+              </div>
             </>
           )}
         </>
