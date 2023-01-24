@@ -53,6 +53,7 @@
     "graphql": "^16.6.0",
     "graphql-request": "^5.1.0",
     "graphql-tag": "^2.12.6",
+    "gsap": "^3.11.4",
     "react-query": "^3.39.2"
   }
 }

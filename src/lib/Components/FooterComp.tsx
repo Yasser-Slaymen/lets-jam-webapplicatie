@@ -83,7 +83,7 @@ function FooterComp() {
                         </div>
                         <div className="footer_icons">
                           
-                          <LinkSocial link="https://twitter.com/Slyman78691" content=" Twitter" />
+                          <LinkSocial link="https://twitter.com/Yasser78691" content=" Twitter" />
                         </div>
                         <div className="footer_icons">
                           
@@ -122,11 +122,13 @@ function FooterComp() {
                 <div className="footer_Date">
                   <p className="copyright_Date">
                     {" "}
-                    Copyright &copy;2023 BISNEXT. All Rights Reserved
+                    Copyright &copy;2023 YASSER. All Rights Reserved
                   </p>
                   <p className="copyright_privacay">
-                    Terms of Use Privacay Policy
+                    
+                    <span>Terms of Use</span><span> Privacay Policy</span>
                   </p>
+                  
                 </div>
               </div>
             </>

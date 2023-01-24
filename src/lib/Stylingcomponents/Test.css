@@ -1,5 +1,14 @@
-.test{
+.Test{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     padding: 3em;
-    height: 300px;
-    background-color: rgb(196, 145, 145);
+    margin: 3em;
+    background-color: rgb(225, 208, 208);
+}
+.Test section{
+    margin: 1em;
+    background-color: aqua;
+
 }

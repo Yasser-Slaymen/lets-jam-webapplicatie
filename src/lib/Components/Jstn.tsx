@@ -2,11 +2,50 @@ import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
-// import { RichText } from "@graphcms/rich-text-react-renderer";
+import { gsap } from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 function Jst() {
-  const [testes, setProducts] = useState(null);
+  // gsap
+  const test = useRef();
+  const img1 = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      // gsap.fromTo(".Test", { rotation: 180 }, { rotation: 0 , duration:3 });
+      // gsap.to(".Test", {  stagger: {each: 0.15},
+      //   x: 100,
+      //   repeat: -1,
+      //   repeatDelay: 1,
+      //   yoyo: true,
+      // });
+        gsap.from('section', { duration:1.5, opacity: 0, delay: 1,
+         stagger:1
+         , scrollTrigger:{
+          trigger:".section",
+         }
+     })
 
+      gsap.fromTo(img1.current, {  opacity: 0 , x: -1000 }, { opacity: 1 , x: 0 , duration:3 , scrollTrigger:{
+        trigger:img1.current,
+        start: "top center",
+        end: "+=500",
+        // onEnterBack: self => console.log("progress:", self.progress)
+      }});
+
+
+      // or refs
+      // gsap.to(img1.current, {scrollTrigger: ".box", x: 700  });
+
+    }, test);
+
+    return () => ctx.revert();
+  });
+
+  // hygraph
+  const [testes, setProducts] = useState(null);
   useEffect(() => {
     const fetchProducts = async () => {
       const { testes } = await request(
@@ -35,110 +74,48 @@ function Jst() {
   }, []);
 
   return (
-    <>
-      <div className="test">
+    <div ref={test}>
+      <div  className="Test">
         <Ttest>
           <div>
             {!testes ? (
               "Loading... Oops somthing went wrong!"
             ) : (
-              <ul>
+              <div>
                 {testes.map((test: any) => (
                   <div key={test.id}>
-                    <h1>{test.nametest}</h1>
-                    <img src={test.img.url} alt="img" />
+
+                    <section>
+                      <h1 className="box">{test.nametest}</h1>
+                      <img className="test_img1" src={test.img.url} alt="img" />
+                    </section>
+
+                    <section >
+                      <h1 className="header">{test.nametest}</h1>
+                      <img
+                        className="test_img"
+                        src={test.img.url}
+                        alt="img"
+                      />
+                    </section>
+
+                    <section >
+                      <h1 className="box">{test.nametest}</h1>
+                      <img className="test_img" src={test.img.url} alt="img" />
+                    </section>
+
+                    <section ref={img1} className="scrol">
+                      <h1 className="box">{test.nametest}</h1>
+                      <img className="test_img" src={test.img.url} alt="img" />
+                    </section>
                   </div>
                 ))}
-              </ul>
+              </div>
             )}
           </div>
         </Ttest>
       </div>
-    </>
+    </div>
   );
 }
 export default Jst;
-
-// {!webs ? (
-//   "Oopss somthing going wrong"
-//   ) : (
-//     <>
-//     {webs.map((web: any) => ())}
-//     </>
-//     )}
-
-// import { workoutsLatestQuery } from "../Graphql/Queries";
-// import { GraphQLClient } from "graphql-request";
-// import Ttest from "./Ttest";
-
-// import React,{useState, useEffect} from 'react'
-// import {graphcms, QUERY_SLUG_CATEGORIES } from "../Graphql/Queries";
-
-// function Test({ categories }: any) {
-//   return (
-//     <>
-//       <div className="test">
-//         <Ttest text="Test">
-//           {categories.map((categorie: any) => {
-//             return <h2>{categorie.title}</h2>;
-//           })}
-//         </Ttest>
-//       </div>
-//     </>
-//   );
-// }
-// export default Test;
-
-// export async function getServerSideProps() {
-//   const hygraph = new GraphQLClient(process.env.REACT_APP_API);
-
-//   const { categories } = await hygraph.request(workoutsLatestQuery);
-//   return {
-//     props: {
-//       categories,
-//     },
-//   };
-// }
-
-// import {testQuery} from "../Graphql/Queries";
-
-// const { data} = useGQLQuery('categories', QUERY_SLUG_CATEGORIES);
-//    console.log(data);
-// data.map((story) =>{ return()})
-// import {graphcms, QUERY_SLUG_CATEGORIES} from '../Graphql/Queries'
-// export async function getServerSideProps() {
-//   const hygraph = new GraphQLClient(
-//     process.env.REACT_APP_API
-//   )
-
-//   const { data } = await hygraph.request(testQuery);
-//   console.log(data)
-//   return {
-//     props: {
-//       data
-
-//     }
-
-//   }
-
-// }
-
-// function Test() {
-//   const [categories, setCategories] = useState([]);
-//   useEffect(() => {
-//     graphcms.request(QUERY_SLUG_CATEGORIES).then(res => setCategories(res.categories) )
-
-//   },[])
-//   return (
-
-//     <>
-//     categories?.map(category => (
-//       <Ttest key={category.title}
-//       />
-
-//     ))
-
-//     </>
-
-//   );
-// }
