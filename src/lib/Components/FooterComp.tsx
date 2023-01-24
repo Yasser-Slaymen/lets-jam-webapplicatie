@@ -21,6 +21,9 @@ function FooterComp() {
                   }
                   multiText
                   markdown
+                  icon{
+                    url
+                  }
                   
                   
             }
@@ -47,7 +50,7 @@ function FooterComp() {
                     <section className="footer_content1">
                       <img className="footer_logo" src={logo} alt="logo" />
                       <p>{footer.multiText}</p>
-                      <a href="tel:+31622817308">+31622817308</a>
+                      <a href="tel:+31622817308"> <img className="test_img1" src={footer.icon.url} alt="img" />+31622817308</a>
                     </section>
 
                     <section className="footer_content2">
@@ -121,7 +124,7 @@ function FooterComp() {
                 <div className="line"></div>
                 <div className="footer_Date">
                   <p className="copyright_Date">
-                    {" "}
+                    
                     Copyright &copy;2023 YASSER. All Rights Reserved
                   </p>
                   <p className="copyright_privacay">

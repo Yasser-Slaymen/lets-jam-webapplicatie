@@ -63,15 +63,42 @@ function ThirdComp() {
         }
       );
 
-      gsap.fromTo(
-        title.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 7, delay: 1, ease: "slow(0.7, 0.1, false)" }
-      );
+      gsap.from(title.current, {
+        duration: 2,
+        opacity: 0,
+        delay: 0,
+        start: "top bottom",
+        ease: "steps(2)",
+        stagger: 1,
+        scrollTrigger: {
+          trigger: title.current,
+          start: "top bottom",
+        },
+      });
+
+      // gsap.fromTo(
+      //   title.current,
+      //   { opacity: 0 },
+      //   {
+      //     opacity: 1,
+      //     duration: 4,
+      //     ease: "steps(2)",
+      //     delay: 2,
+      //     start: "top center",
+      //   }
+
+
+      // );
       gsap.fromTo(
         text.current,
         { opacity: 0 },
-        { opacity: 1, duration: 8, delay: 2, ease: "slow(0.7, 0.1, false)" }
+        {
+          opacity: 1,
+          duration: 4,
+          ease: "steps(2)",
+          delay: 2,
+          start: "top center",
+        }
       );
     }, ap);
     return () => ctx.revert();
@@ -104,7 +131,7 @@ function ThirdComp() {
     fetchProducts();
   }, []);
   return (
-    <div ref={ap} className="third_gsap">
+    <div ref={ap}>
       <TthirdComp>
         <div>
           {!thirdSections ? (
