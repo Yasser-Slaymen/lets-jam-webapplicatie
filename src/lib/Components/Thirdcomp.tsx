@@ -76,19 +76,6 @@ function ThirdComp() {
         },
       });
 
-      // gsap.fromTo(
-      //   title.current,
-      //   { opacity: 0 },
-      //   {
-      //     opacity: 1,
-      //     duration: 4,
-      //     ease: "steps(2)",
-      //     delay: 2,
-      //     start: "top center",
-      //   }
-
-
-      // );
       gsap.fromTo(
         text.current,
         { opacity: 0 },
