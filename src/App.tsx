@@ -11,13 +11,13 @@ import Jst from "./lib/Components/Jstn";
 function App() {
   return (
     <div className="App">
-      <Jst />
       <HeadSect />
       <PrimarySection />
       <SecondSection />
       <ThirdSection />
       <FouthSection />
       <FooterSection />
+      <Jst />
     </div>
   );
 }
