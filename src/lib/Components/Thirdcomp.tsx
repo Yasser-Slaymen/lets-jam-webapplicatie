@@ -6,8 +6,78 @@ import Img3_1 from "../Images/img3_1.png";
 import Img3_2 from "../Images/img3_2.png";
 import Ellipse3_4 from "../Images/Ellipse3_4.png";
 import Shape3_3 from "../Images/shape3_3.png";
+import { gsap } from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function ThirdComp() {
+  // gsap
+  const ap = useRef();
+  const title = useRef();
+  const text = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".thirdcomp",
+        { opacity: 0, y: 500 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 3,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".thirdcomp",
+            start: "top bottom",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".img3_2",
+        { opacity: 0, x: 500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 2,
+          delay: 0,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".img3_2",
+            start: "top bottom",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".img3_1",
+        { opacity: 0, x: -500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 2,
+          delay: 0,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".img3_1",
+            start: "top bottom",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        title.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 7, delay: 1, ease: "slow(0.7, 0.1, false)" }
+      );
+      gsap.fromTo(
+        text.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 8, delay: 2, ease: "slow(0.7, 0.1, false)" }
+      );
+    }, ap);
+    return () => ctx.revert();
+  });
+
+  // hyraph
   const [thirdSections, setProducts] = useState(null);
   useEffect(() => {
     const fetchProducts = async () => {
@@ -34,13 +104,13 @@ function ThirdComp() {
     fetchProducts();
   }, []);
   return (
-    <>
+    <div ref={ap} className="third_gsap">
       <TthirdComp>
-        <>
+        <div>
           {!thirdSections ? (
             "Oopss somthing going wrong"
           ) : (
-            <>
+            <div>
               {thirdSections.map((third: any) => (
                 <div className="thirdcomp" key={third.id}>
                   <section className="third_images">
@@ -52,8 +122,8 @@ function ThirdComp() {
 
                   <section className="third_content">
                     <h5>ABOUT US</h5>
-                    <h3>{third.title}</h3>
-                    <p>
+                    <h3 ref={title}>{third.title}</h3>
+                    <p ref={text}>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Repudiandae laudantium esse aperiam libero dolore maxime
                       amet tenetur laborum, error voluptatem beatae consectetur
@@ -61,8 +131,9 @@ function ThirdComp() {
                       amet tenetur laborum, error voluptatem beatae consectetur
                       sunt vel molestias quis blanditiis unde nisi sapiente?
                       amet tenetur laborum, error voluptatem beatae consectetur
-                      sunt vel molestias quis blanditiis unde nisi sapiente?amet tenetur laborum, error voluptatem beatae consectetur
-                      sunt vel molestias quis blanditiis unde nisi sapiente?
+                      sunt vel molestias quis blanditiis unde nisi sapiente?amet
+                      tenetur laborum, error voluptatem beatae consectetur sunt
+                      vel molestias quis blanditiis unde nisi sapiente?
                     </p>
                     <ul>
                       <li>
@@ -98,11 +169,11 @@ function ThirdComp() {
                   </section>
                 </div>
               ))}
-            </>
+            </div>
           )}
-        </>
+        </div>
       </TthirdComp>
-    </>
+    </div>
   );
 }
 export default ThirdComp;

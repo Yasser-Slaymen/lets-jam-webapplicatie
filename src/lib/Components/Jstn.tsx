@@ -9,38 +9,21 @@ gsap.registerPlugin(ScrollTrigger)
 
 function Jst() {
   // gsap
-  const test = useRef();
+  const ap = useRef();
   const img1 = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // use scoped selectors
-      // gsap.fromTo(".Test", { rotation: 180 }, { rotation: 0 , duration:3 });
-      // gsap.to(".Test", {  stagger: {each: 0.15},
-      //   x: 100,
-      //   repeat: -1,
-      //   repeatDelay: 1,
-      //   yoyo: true,
-      // });
-        gsap.from('section', { duration:1.5, opacity: 0, delay: 1,
-         stagger:1
-         , scrollTrigger:{
-          trigger:".section",
-         }
-     })
-
-      gsap.fromTo(img1.current, {  opacity: 0 , x: -1000 }, { opacity: 1 , x: 0 , duration:3 , scrollTrigger:{
-        trigger:img1.current,
+      gsap.fromTo(".", {  opacity: 0 , x: -1000 }, { opacity: 1 , x: 0 , duration:3 ,ease: "elastic.out(1, .7)",
+ scrollTrigger:{
+        trigger:".",
         start: "top center",
         end: "+=500",
-        // onEnterBack: self => console.log("progress:", self.progress)
+       onEnterBack: self => console.log("progress:", self.progress)
       }});
 
+     
 
-      // or refs
-      // gsap.to(img1.current, {scrollTrigger: ".box", x: 700  });
-
-    }, test);
-
+    }, ap);
     return () => ctx.revert();
   });
 
@@ -74,7 +57,7 @@ function Jst() {
   }, []);
 
   return (
-    <div ref={test}>
+    <div ref={ap}>
       <div  className="Test">
         <Ttest>
           <div>
