@@ -46,9 +46,6 @@
     "file-loader": "^6.2.0",
     "graphql": "^16.6.0",
     "graphql-request": "^5.1.0",
-    "graphql-tag": "^2.12.6",
-    "gsap": "^3.11.4",
-    "react-gsap": "^3.2.1",
-    "react-query": "^3.39.2"
+    "graphql-tag": "^2.12.6"
   }
 }
