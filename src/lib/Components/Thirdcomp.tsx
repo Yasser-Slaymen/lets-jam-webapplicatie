@@ -6,9 +6,65 @@ import Img3_1 from "../Images/img3_1.png";
 import Img3_2 from "../Images/img3_2.png";
 import Ellipse3_4 from "../Images/Ellipse3_4.png";
 import Shape3_3 from "../Images/shape3_3.png";
+import gsap  from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 
 function ThirdComp() {
+  // gsap
+  gsap.registerPlugin(ScrollTrigger);
+  const ap = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".thirdcomp",
+        { opacity: 0, y: 500 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 3,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".thirdcomp",
+            start: "top bottom",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".img3_2",
+        { opacity: 0, x: 500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 2,
+          delay: 0,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".img3_2",
+            start: "top bottom",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".img3_1",
+        { opacity: 0, x: -500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 2,
+          delay: 0,
+          ease: "elastic.out(1, .7)",
+          scrollTrigger: {
+            trigger: ".img3_1",
+            start: "top bottom",
+          },
+        }
+      );
+    }, ap);
+    return () => ctx.revert();
+  });
   
 
   // hyraph
@@ -38,8 +94,8 @@ function ThirdComp() {
     fetchProducts();
   }, []);
   return (
-    // ref={ap}
-    <div>
+    
+    <div ref={ap}>
       <TthirdComp>
         <div>
           {!thirdSections ? (
