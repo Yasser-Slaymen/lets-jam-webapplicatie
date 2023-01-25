@@ -3,6 +3,8 @@ type Secondlogosprops = {
   children: ReactNode;
 };
 function TsecondLogos({ children }: Secondlogosprops) {
-  return <>{children}</>;
+  return (
+<>{children}</>
+  ) 
 }
 export default TsecondLogos;

@@ -6,10 +6,10 @@ import { request } from "graphql-request";
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 function PrimarySection() {
   // gsap
+  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   // const img1 = useRef();
   useLayoutEffect(() => {

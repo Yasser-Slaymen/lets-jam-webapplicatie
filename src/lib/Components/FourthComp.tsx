@@ -3,13 +3,13 @@ import { request } from "graphql-request";
 import Tfourth from "./Tfourth";
 import "../Stylingcomponents/FourthComp.css";
 import Button_4 from "../Images/button_4.png";
-import { gsap } from "gsap";
+import gsap  from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 function FourthComp() {
   // gsap
+  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   const details_1 = useRef();
   const details_2 = useRef();

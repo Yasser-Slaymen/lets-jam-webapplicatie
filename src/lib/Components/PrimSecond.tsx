@@ -7,10 +7,10 @@ import Meta from "../Images/meta.png";
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 function PrimSecond() {
   // gsap
+  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {

@@ -9,10 +9,10 @@ import Shape3_3 from "../Images/shape3_3.png";
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 function ThirdComp() {
   // gsap
+  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
