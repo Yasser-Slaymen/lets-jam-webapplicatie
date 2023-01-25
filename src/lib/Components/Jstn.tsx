@@ -2,31 +2,9 @@ import "../Stylingcomponents/Test.css";
 import Ttest from "./Ttest";
 import { useEffect, useState } from "react";
 import { request } from "graphql-request";
-import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Jst() {
-  // gsap
-  gsap.registerPlugin(ScrollTrigger)
-  const ap = useRef();
-  const img1 = useRef();
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(".", {  opacity: 0 , x: -1000 }, { opacity: 1 , x: 0 , duration:3 ,ease: "elastic.out(1, .7)",
- scrollTrigger:{
-        trigger:".",
-        start: "top center",
-        end: "+=500",
-       onEnterBack: self => console.log("progress:", self.progress)
-      }});
-
-     
-
-    }, ap);
-    return () => ctx.revert();
-  });
-
+  
   // hygraph
   const [testes, setProducts] = useState(null);
   useEffect(() => {
@@ -57,7 +35,8 @@ function Jst() {
   }, []);
 
   return (
-    <div ref={ap}>
+    // ref={ap}
+    <div >
       <div  className="Test">
         <Ttest>
           <div>
@@ -86,8 +65,9 @@ function Jst() {
                       <h1 className="box">{test.nametest}</h1>
                       <img className="test_img" src={test.img.url} alt="img" />
                     </section>
-
-                    <section ref={img1} className="scrol">
+{/* 
+                    ref={img1}  */}
+                    <section className="scrol">
                       <h1 className="box">{test.nametest}</h1>
                       <img className="test_img" src={test.img.url} alt="img" />
                     </section>
