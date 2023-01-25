@@ -91,13 +91,12 @@ function FourthComp() {
           opacity: 1,
           x: 0,
           duration: 3,
-          delay: 4,
+          delay: 3,
           ease: "elastic.out(1, .7)",
           scrollTrigger: {
             trigger: details_4.current,
             start: "top bottom",
             end: "+=500",
-            onEnterBack: (self) => console.log("progress:", self.progress),
           },
         }
       );
