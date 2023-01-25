@@ -6,78 +6,15 @@ import Button2 from "../Images/button2.png";
 import Img2_1 from "../Images/img2_1.png";
 import Img2_2 from "../Images/img2_2.png";
 import Img2_3 from "../Images/img2_3.png";
-import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function SecondLogos() {
-  // gsap
-  gsap.registerPlugin(ScrollTrigger);
-  const ap = useRef();
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(".SecondLogos", {
-        duration: 2,
-        opacity: 0,
-        delay: 1,
-        stagger: 1,
-        scrollTrigger: {
-          trigger: ".SecondLogos",
-          start: "top bottom",
-        },
-      });
-      gsap.fromTo(
-        ".se2_2",
-        { rotation: 0 },
-        {
-          rotation: 360,
-          duration: 3,
-          start: "top center",
-          repeat: 2,
-          repeatDelay: 1,
-          yoyo: true,
-        }
-      );
-
-      gsap.fromTo(
-        ".se2_1",
-        { opacity: 0, x: -1000 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 2,
-          ease: "sine.inOut",
-          scrollTrigger: {
-            trigger: ".se2_1",
-            start: "top bottom",
-            end: "+=500",
-            onEnterBack: (self) => console.log("progress:", self.progress),
-          },
-        }
-      );
-      gsap.fromTo(
-        ".se2_3",
-        { opacity: 0, x: 500 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 2,
-          ease: "sine.inOut",
-          scrollTrigger: {
-            trigger: ".se2_3",
-            start: "top center",
-            end: "+=500",
-            onEnterBack: (self) => console.log("progress:", self.progress),
-          },
-        }
-      );
-    }, ap);
-    return () => ctx.revert();
-  });
+  
 
   // data
   return (
-    <div ref={ap}>
+    // ref={ap}
+    <div >
       <TsecondLogos>
         <div className="SecondLogos">
           <img className="sec-img1" src={Shape} alt="ellipe" />

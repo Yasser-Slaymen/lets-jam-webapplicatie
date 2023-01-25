@@ -3,56 +3,10 @@ import Title from "../lib/Components/Title";
 import PrimSecond from "../lib/Components/PrimSecond";
 import React, { useEffect, useState } from "react";
 import { request } from "graphql-request";
-import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function PrimarySection() {
-  // gsap
-  gsap.registerPlugin(ScrollTrigger);
-  const ap = useRef();
-  // const img1 = useRef();
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".primTitle",
-        { opacity: 0 },
-        { opacity: 1, duration: 3, ease: "slow(0.7, 0.1, false)" }
-      );
-      gsap.fromTo(
-        ".primAgency",
-        { opacity: 0, x: 500 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 3,
-          delay: 1,
-          ease: "elastic.out(1, .7)",
-          scrollTrigger: {
-            trigger: ".primText",
-            end: "+=500",
-          },
-        }
-      );
-      gsap.fromTo(
-        ".primText",
-        { opacity: 0, x: -500 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 3,
-          delay: 1,
-          ease: "elastic.out(1, .7)",
-          scrollTrigger: {
-            trigger: ".primText",
-            end: "+=500",
-          },
-        }
-      );
-    }, ap);
-    return () => ctx.revert();
-  });
-
+  
   // hygraph
   const [primary, setProducts] = useState(null);
   useEffect(() => {
@@ -80,7 +34,8 @@ function PrimarySection() {
   }, []);
 
   return (
-    <div ref={ap} className="primarymain">
+    // ref={ap}
+    <div className="primarymain">
       <Title>
         <div className="primarySction">
           {!primary ? (
