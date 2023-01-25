@@ -5,7 +5,7 @@ import logo from "../Images/logo.png";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div>
+      <div className="logo">
         <NavLink logo={logo} title="" link="" />
       </div>
       <ul className="list-items">

@@ -1,7 +1,7 @@
 import "../Pages/style/PrimarySection.css";
 import Title from "../lib/Components/Title";
 import PrimSecond from "../lib/Components/PrimSecond";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { request } from "graphql-request";
 import gsap  from "gsap";
 import { useLayoutEffect, useRef } from "react";

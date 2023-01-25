@@ -31,3 +31,16 @@ li{
     background-color: transparent;
 }
 
+@media (max-width:30em) {
+    nav{
+        background-color: blue;
+    }
+    .nav_logo{
+        width: 100%;
+    }
+    .list-items{
+        display: none;
+    }
+
+}
+

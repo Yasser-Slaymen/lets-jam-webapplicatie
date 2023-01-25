@@ -9,7 +9,7 @@ function NavLink({ title, link, logo }: NavLinkProps) {
   return (
     <>
       <a href={link}>{title}</a>
-      <img src={logo} alt="" />
+      <img className="nav_logo" src={logo} alt="" />
     </>
   );
 }
