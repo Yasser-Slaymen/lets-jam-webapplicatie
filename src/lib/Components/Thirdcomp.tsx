@@ -14,8 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
 function ThirdComp() {
   // gsap
   const ap = useRef();
-  // const title = useRef();
-  // const text = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
@@ -62,9 +60,6 @@ function ThirdComp() {
           },
         }
       );
-
-     
-     
     }, ap);
     return () => ctx.revert();
   });
