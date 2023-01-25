@@ -63,7 +63,8 @@ function ThirdComp() {
         }
       );
 
-      gsap.from(title.current, {
+      gsap.from(
+        title.current, {
         duration: 2,
         opacity: 0,
         delay: 0,
@@ -76,17 +77,7 @@ function ThirdComp() {
         },
       });
 
-      gsap.fromTo(
-        text.current,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 4,
-          ease: "steps(2)",
-          delay: 2,
-          start: "top center",
-        }
-      );
+     
     }, ap);
     return () => ctx.revert();
   });
