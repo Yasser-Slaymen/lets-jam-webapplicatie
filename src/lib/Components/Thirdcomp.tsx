@@ -14,8 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 function ThirdComp() {
   // gsap
   const ap = useRef();
-  const title = useRef();
-  const text = useRef();
+  // const title = useRef();
+  // const text = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
@@ -63,20 +63,7 @@ function ThirdComp() {
         }
       );
 
-      gsap.from(
-        title.current, {
-        duration: 2,
-        opacity: 0,
-        delay: 0,
-        start: "top bottom",
-        ease: "steps(2)",
-        stagger: 1,
-        scrollTrigger: {
-          trigger: title.current,
-          start: "top bottom",
-        },
-      });
-
+     
      
     }, ap);
     return () => ctx.revert();
@@ -127,8 +114,8 @@ function ThirdComp() {
 
                   <section className="third_content">
                     <h5>ABOUT US</h5>
-                    <h3 ref={title}>{third.title}</h3>
-                    <p ref={text}>
+                    <h3>{third.title}</h3>
+                    <p>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Repudiandae laudantium esse aperiam libero dolore maxime
                       amet tenetur laborum, error voluptatem beatae consectetur
