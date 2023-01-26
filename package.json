@@ -11,7 +11,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "gsap": "^3.11.4",
-    "react": "^17.0.0",
+    "react": "^16.13.1",
     "react-dom": "^18.2.0",
     "react-gsap": "^3.2.1",
     "react-router-dom": "^6.6.2",

@@ -6,11 +6,9 @@ import Img3_1 from "../Images/img3_1.png";
 import Img3_2 from "../Images/img3_2.png";
 import Ellipse3_4 from "../Images/Ellipse3_4.png";
 import Shape3_3 from "../Images/shape3_3.png";
-import gsap  from "gsap";
+import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-
 
 function ThirdComp() {
   // gsap
@@ -65,7 +63,6 @@ function ThirdComp() {
     }, ap);
     return () => ctx.revert();
   });
-  
 
   // hyraph
   const [thirdSections, setProducts] = useState(null);
@@ -94,7 +91,6 @@ function ThirdComp() {
     fetchProducts();
   }, []);
   return (
-    
     <div ref={ap}>
       <TthirdComp>
         <div>

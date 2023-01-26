@@ -4,7 +4,7 @@ import Ellipe from "../Images/Ellipse.png";
 import Sid from "../Images/sid.png";
 import Pbuton from "../Images/pbuton.png";
 import Meta from "../Images/meta.png";
-import gsap from "gsap";
+// import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
