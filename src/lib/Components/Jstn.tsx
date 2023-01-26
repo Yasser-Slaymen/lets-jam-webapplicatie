@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { request } from "graphql-request";
 
 function Jst() {
-  
   // hygraph
   const [testes, setProducts] = useState(null);
   useEffect(() => {
@@ -36,8 +35,8 @@ function Jst() {
 
   return (
     // ref={ap}
-    <div >
-      <div  className="Test">
+    <div>
+      <div className="Test">
         <Ttest>
           <div>
             {!testes ? (
@@ -46,26 +45,21 @@ function Jst() {
               <div>
                 {testes.map((test: any) => (
                   <div key={test.id}>
-
                     <section>
                       <h1 className="box">{test.nametest}</h1>
                       <img className="test_img1" src={test.img.url} alt="img" />
                     </section>
 
-                    <section >
+                    <section>
                       <h1 className="header">{test.nametest}</h1>
-                      <img
-                        className="test_img"
-                        src={test.img.url}
-                        alt="img"
-                      />
+                      <img className="test_img" src={test.img.url} alt="img" />
                     </section>
 
-                    <section >
+                    <section>
                       <h1 className="box">{test.nametest}</h1>
                       <img className="test_img" src={test.img.url} alt="img" />
                     </section>
-{/* 
+                    {/* 
                     ref={img1}  */}
                     <section className="scrol">
                       <h1 className="box">{test.nametest}</h1>
