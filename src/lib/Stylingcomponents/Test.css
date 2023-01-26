@@ -1,4 +1,4 @@
-.Test{
+/* .Test{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,4 +11,17 @@
     margin: 1em;
     background-color: aqua;
 
+} */
+
+.my-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:30em;
+    width: 40%;
+    padding: 3em;
+    margin: 3em;
+    background-color: rgb(225, 208, 208);
 }
+
