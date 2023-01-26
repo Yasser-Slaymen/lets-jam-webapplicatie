@@ -77,63 +77,78 @@
   list-style-type: none;
   color: #cccccc;
 }
-.third_content ul li{
-  padding: .8em 0 0 0;
+.third_content ul li {
+  padding: 0.8em 0 0 0;
 }
-#check3_box{
- position: relative;
-
+#check3_box {
+  position: relative;
 }
-#check3_box::before{
+#check3_box::before {
   position: absolute;
-  content: "" ;
+  content: "";
   height: 20px;
   width: 20px;
-  background-color:#FF7425 ;
-  border: 1px solid #FF7425;
+  background-color: #ff7425;
+  border: 1px solid #ff7425;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer ;
+  cursor: pointer;
   transition: 0.3s all ease;
 }
 
-#check3_box:checked::before{
-  background-color:#FF7425 ;
-  border: 1px solid #FF7425 ;
-
+#check3_box:checked::before {
+  background-color: #ff7425;
+  border: 1px solid #ff7425;
 }
-#check3_box:checked::after{
+#check3_box:checked::after {
   position: absolute;
-  content:url(/src/lib/Images/checkbox.png);
+  content: url(/src/lib/Images/checkbox.png);
   background-position: center;
   background-size: cover;
   top: 26%;
   left: 124%;
   transform: translate(-50%, -50%);
-
 }
-.checkbox3_span{
-  margin-left: .7em;
+.checkbox3_span {
+  margin-left: 0.7em;
 }
 
-.third_content article span{
-width: 96px;
-height: 49px;
-font-family: 'Plus Jakarta Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 35px;
-line-height: 140%;
-/* identical to box height, or 49px */
-color: #FFFFFF;
-
+.third_content article span {
+  width: 96px;
+  height: 49px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 140%;
+  /* identical to box height, or 49px */
+  color: #ffffff;
 }
-.third_content article{
+.third_content article {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-
-
+}
+@media (max-width: 40em) {
+  .thirdcomp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top:2em;
+  }
+  .third_images {
+    width:100vw;
+    height:80vh;
+  }
+  .img3_1 {
+    width: 100%;
+    height:fit-content;
+  }
+  .img3_2 {
+    display: none;
+  }
 }

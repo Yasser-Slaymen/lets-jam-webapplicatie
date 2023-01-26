@@ -30,17 +30,19 @@ nav{
 li{
     background-color: transparent;
 }
-/* 
-@media (max-width:30em) {
+
+@media (max-width:40em){
     nav{
-        background-color: blue;
+        display:block;
     }
+   
     .nav_logo{
-        width: 100%;
+        margin-left: 1em;
+        width: 80%;
     }
     .list-items{
         display: none;
     }
 
-} */
+}
 

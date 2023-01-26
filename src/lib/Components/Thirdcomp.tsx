@@ -78,8 +78,7 @@ function ThirdComp() {
                 img {
                   url
                 }
-                
-                
+                multiText                
           }
         }
       `
@@ -111,16 +110,7 @@ function ThirdComp() {
                     <h5>ABOUT US</h5>
                     <h3>{third.title}</h3>
                     <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Repudiandae laudantium esse aperiam libero dolore maxime
-                      amet tenetur laborum, error voluptatem beatae consectetur
-                      sunt vel molestias quis blanditiis unde nisi sapiente?
-                      amet tenetur laborum, error voluptatem beatae consectetur
-                      sunt vel molestias quis blanditiis unde nisi sapiente?
-                      amet tenetur laborum, error voluptatem beatae consectetur
-                      sunt vel molestias quis blanditiis unde nisi sapiente?amet
-                      tenetur laborum, error voluptatem beatae consectetur sunt
-                      vel molestias quis blanditiis unde nisi sapiente?
+                      {third.multiText}
                     </p>
                     <ul>
                       <li>

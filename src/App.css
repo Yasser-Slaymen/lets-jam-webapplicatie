@@ -5,3 +5,13 @@
   background-color: #000000;
   align-items: center;
 }
+
+@media (max-width:40em) {
+   .App{
+    width: 40em;
+    margin: 0;
+   }
+
+}
+
+

@@ -64,8 +64,8 @@ function PrimarySection() {
             primary {
                 id
                 name
-                text {
-                  text
+                firstText {
+                  html
                 }
                 
           }
@@ -98,13 +98,7 @@ function PrimarySection() {
                     </span>
                   </h1>
                   <h2 className="primAgency">Agency</h2>
-                  <p className="primText">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br />
-                    nostrum dolorem vel, deserunt assumenda harum necessitat
-                    <br />
-                    nostrum dolorem vel, deserunt assumenda harum necessitat
-                  </p>
+                  <p className="primText"    dangerouslySetInnerHTML={{__html:prim.firstText.html}}></p>
                 </div>
               ))}
             </div>

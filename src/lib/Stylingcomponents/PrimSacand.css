@@ -17,3 +17,14 @@
     grid-column: 15/20;
     grid-row: 6/8 ; 
 }
+@media (max-width:40em) {
+    .primsacond{
+     display: none;
+    }
+    /* .img-prim1,
+    .img-prim2, 
+    .img-prim3,
+    .img-prim4{
+       display: none;
+    } */
+  }

@@ -69,7 +69,6 @@
   grid-template-rows: repeat(10, 4%);
   overflow: hidden;
   height: 33em;
-
 }
 .se2_1 {
   grid-column: 2/6;
@@ -88,7 +87,6 @@
   margin-right: 2em;
   width: 350px;
   height: 439px;
-
 }
 
 .futer2_3 h2 {
@@ -100,4 +98,44 @@
   color: #ffffff;
   margin-top: 0.2em;
 }
-
+@media (max-width: 40em) {
+  .sec-img1 {
+    display: none;
+  }
+  .Sec_1 {
+    flex-direction: column;
+    margin: 0;
+  }
+  .sec-img2 {
+    padding: 1em;
+    width: 70%;
+  }
+  .Sec_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .head2_1 {
+    margin: 0;
+  }
+  .head2_2 {
+    margin: 0;
+  }
+  .futer2_3 img {
+    width: 100vw;
+    height: 30vh;
+  }
+  .futer2_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 50em; */
+  }
+  .futer2_3 h2 {
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 135%;
+  }
+}
