@@ -92,7 +92,7 @@ function FourthComp() {
           opacity: 1,
           x: 0,
           duration: 3,
-          delay: 3,
+          delay: 2,
           ease: "elastic.out(1, .7)",
           scrollTrigger: {
             trigger: details_4.current,
