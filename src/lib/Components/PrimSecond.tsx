@@ -4,15 +4,15 @@ import Ellipe from "../Images/Ellipse.png";
 import Sid from "../Images/sid.png";
 import Pbuton from "../Images/pbuton.png";
 import Meta from "../Images/meta.png";
-// import gsap from "gsap";
+import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function PrimSecond() {
   // gsap
-  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.fromTo(
         ".img-prim2",

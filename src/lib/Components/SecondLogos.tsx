@@ -12,9 +12,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function SecondLogos() {
   // gsap
-  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.from(".SecondLogos", {
         duration: 2,

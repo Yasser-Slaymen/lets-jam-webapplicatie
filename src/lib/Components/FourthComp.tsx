@@ -10,13 +10,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function FourthComp() {
   // gsap
 
-  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   const details_1 = useRef();
   const details_2 = useRef();
   const details_3 = useRef();
   const details_4 = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.from(".fourth_portoflio", {
         duration: 2,

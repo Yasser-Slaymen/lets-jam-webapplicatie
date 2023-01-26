@@ -12,5 +12,4 @@ root.render(
   </React.StrictMode>
 );
 
-// import { PrismicProvider } from '@prismicio/react'
-// import { client } from '../src/lib/Utils/prismic'
+

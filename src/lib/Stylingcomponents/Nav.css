@@ -30,7 +30,7 @@ nav{
 li{
     background-color: transparent;
 }
-
+/* 
 @media (max-width:30em) {
     nav{
         background-color: blue;
@@ -42,5 +42,5 @@ li{
         display: none;
     }
 
-}
+} */
 

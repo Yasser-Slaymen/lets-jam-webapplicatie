@@ -12,9 +12,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ThirdComp() {
   // gsap
-  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.fromTo(
         ".thirdcomp",

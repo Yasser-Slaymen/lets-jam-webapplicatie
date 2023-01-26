@@ -9,10 +9,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function PrimarySection() {
   // gsap
-  gsap.registerPlugin(ScrollTrigger);
   const ap = useRef();
   // const img1 = useRef();
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.fromTo(
         ".primTitle",
