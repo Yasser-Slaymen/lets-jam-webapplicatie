@@ -23,8 +23,8 @@ Dit repository voor Fdnd we love web . Hierbij wordden er Interviewschema bekend
 
 ## 🧭Installatie & Gebruik
 * Cloning the repository
-* ```javascript 
-git clone git@github.com:Yasser-Slaymen/lose-your-head-the-client-case.git
+```javascript 
+git clone git@github.com:https://github.com/Yasser-Slaymen/lets-jam-webapplicatie.git
 Moving to the folder
 cd lose-your-head-the-client-case
 Install NPM packages
