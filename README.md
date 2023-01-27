@@ -1,7 +1,7 @@
-https://www.figma.com/file/mLBLuUDfN3ZaMnZ1GujRcw/Untitled?node-id=0%3A1&t=4bTY1wCwxbGyR1h6-0
-# Getting Started with Create React App
+# Digital Agiency Web
+![readme](https://user-images.githubusercontent.com/90189815/215102104-e41b5db1-cfcc-4fb9-992d-23d6e16293e9.png)
+Open [https://lets-jam-webapplicatie-ten.vercel.app/](https://lets-jam-webapplicatie-ten.vercel.app/) to view it in the browser.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -9,8 +9,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
