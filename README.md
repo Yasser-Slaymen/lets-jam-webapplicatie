@@ -1,44 +1,43 @@
-https://www.figma.com/file/mLBLuUDfN3ZaMnZ1GujRcw/Untitled?node-id=0%3A1&t=4bTY1wCwxbGyR1h6-0
-# Getting Started with Create React App
+# Digital Agiency Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![readme](https://user-images.githubusercontent.com/90189815/215102104-e41b5db1-cfcc-4fb9-992d-23d6e16293e9.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+Open [https://lets-jam-webapplicatie-ten.vercel.app/](https://lets-jam-webapplicatie-ten.vercel.app/) to view it in the browser.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🧭Beschrijving
+Dit repository voor Fdnd we love web . Hierbij wordden er Interviewschema bekend, als iemand interesse heeft, Dan kan hij makkelijk de specific presentatie vinden met behulp van  Prismic.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## ☸️Kenmerken
+* HTML
+* CSS
+* React
+* Typscript
+* Figma
+* Hygraph
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧭Installatie & Gebruik
+* Cloning the repository
+```javascript 
+git clone git@github.com:https:gh repo clone Yasser-Slaymen/lets-jam-webapplicatie
+Moving to the folder
+Install NPM packages
+ npm install
+Run local server
+npm run start
+   
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🧭 Bronnen
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* (https://reactjs.org/) for your target environment.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
