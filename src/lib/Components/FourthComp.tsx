@@ -141,8 +141,7 @@ function FourthComp() {
               {fourthsections.map((fourth: any) => (
                 <div className="fourthcomp" key={fourth.id}>
                   <section className="fourth_listQuestions">
-                    
-                    <details  ref={details_1}>
+                    <details ref={details_1}>
                       <summary>How can we help your business?</summary>
                       <p>
                         Lorem ipsum dolor sit,, Lorem ipsum, dolor sit amet
@@ -152,7 +151,7 @@ function FourthComp() {
                         architecto totam repellat labore commodi?
                       </p>
                     </details>
-                    
+
                     <details ref={details_2}>
                       <summary>What are the advantages of Bisnext</summary>
                       <p>
@@ -161,7 +160,7 @@ function FourthComp() {
                         architecto totam repellat labore commodi?
                       </p>
                     </details>
-                    
+
                     <details ref={details_3}>
                       <summary>Let's find an office near you?</summary>
                       <p>
@@ -171,7 +170,7 @@ function FourthComp() {
                         repellat labore commodi?
                       </p>
                     </details>
-                    
+
                     <details ref={details_4}>
                       <summary>How IT consultancy expert work?</summary>
                       <p>

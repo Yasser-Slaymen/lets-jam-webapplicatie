@@ -10,16 +10,16 @@ function Navbar() {
       </div>
       <ul className="list-items">
         <li>
-          <NavLink title="Home" link="/home" />
+          <NavLink title="Home" link="/home"/>
         </li>
         <li>
-          <NavLink title="PAGES" link="/page" />
+          <NavLink title="PAGES" link="/page"  />
         </li>
         <li>
-          <NavLink title="BLOG" link="/blog" />
+          <NavLink title="BLOG" link="/blog"  />
         </li>
         <li>
-          <NavLink title="SERVICES" link="/sevices" />
+          <NavLink title="SERVICES" link="/sevices"  />
         </li>
         <li>
           <NavLink title="CONTACT" link="/contact" />
