@@ -7,7 +7,7 @@ Open [https://lets-jam-webapplicatie-ten.vercel.app/](https://lets-jam-webapplic
 
 
 ## 🧭Beschrijving
-Dit repository voor Fdnd we love web . Hierbij wordden er Interviewschema bekend, als iemand interesse heeft, Dan kan hij makkelijk de specific presentatie vinden met behulp van  Prismic.
+Een web digitaal agency is een opdracht dat gespecialiseerd is in het ontwerpen en ontwikkelen van digitale producten, zoals websites, apps en online marketingcampagnes, om de online aanwezigheid van merken te verbeteren en hun digitale doelen te bereiken. Ik heb dit  gemaakt met behulp Reactjs en Hygraph(cms)
 
 
 
